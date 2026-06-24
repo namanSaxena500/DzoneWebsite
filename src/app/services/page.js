@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  ChevronDown, 
-  Check, 
+import {
+  ChevronDown,
+  Check,
   ArrowRight,
   Globe,
   Layers,
@@ -19,12 +19,12 @@ import {
   Monitor,
   GraduationCap
 } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Portfolio from '@/components/Portfolio';
-import Expertise from '@/components/Expertise';
-import Contact from '@/components/Contact';
-import Testimonials from '@/components/Testimonials';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/home/Navbar';
+import Portfolio from '@/components/home/Portfolio';
+import Expertise from '@/components/home/Expertise';
+import Contact from '@/components/home/Contact';
+import Testimonials from '@/components/home/Testimonials';
+import Footer from '@/components/home/Footer';
 
 // Inline SVG illustrations for a high-quality responsive look
 const HeroIllustration = () => (
@@ -43,52 +43,52 @@ const HeroIllustration = () => (
         <stop offset="100%" stopColor="#60a5fa" />
       </linearGradient>
     </defs>
-    
+
     <circle cx="250" cy="200" r="160" fill="url(#heroGrad1)" />
     <circle cx="250" cy="200" r="130" fill="none" stroke="#2563eb" strokeWidth="1" strokeDasharray="6 6" opacity="0.2" />
-    
+
     {/* Laptop Stand */}
     <path d="M180 320 L320 320 L300 290 L200 290 Z" fill="#475569" />
     <rect x="140" y="320" width="220" height="8" rx="4" fill="#334155" />
-    
+
     {/* Laptop Screen Back */}
     <rect x="90" y="70" width="320" height="220" rx="12" fill="#475569" />
     {/* Laptop Screen Front */}
     <rect x="100" y="80" width="300" height="200" rx="6" fill="url(#screenGrad)" />
-    
+
     {/* Browser Bar */}
     <rect x="100" y="80" width="300" height="24" rx="6" fill="#1e293b" />
     <circle cx="115" cy="92" r="4" fill="#ef4444" />
     <circle cx="127" cy="92" r="4" fill="#f59e0b" />
     <circle cx="139" cy="92" r="4" fill="#10b981" />
     <rect x="160" y="86" width="180" height="12" rx="6" fill="#0f172a" />
-    
+
     {/* Code Brackets on Screen */}
     <text x="120" y="150" fill="#38bdf8" fontSize="24" fontWeight="bold" fontFamily="monospace">&lt;</text>
     <text x="360" y="240" fill="#38bdf8" fontSize="24" fontWeight="bold" fontFamily="monospace">&gt;</text>
-    
+
     {/* Floating Code Lines */}
     <rect x="150" y="140" width="120" height="6" rx="3" fill="#64748b" />
     <rect x="150" y="155" width="180" height="6" rx="3" fill="url(#accentGrad)" />
     <rect x="150" y="170" width="90" height="6" rx="3" fill="#10b981" />
-    
+
     {/* Database Icon */}
     <g transform="translate(310, 130)">
       <rect x="0" y="0" width="60" height="80" rx="8" fill="#1e293b" stroke="#334155" strokeWidth="1.5" />
       <ellipse cx="30" cy="20" rx="20" ry="6" fill="#3b82f6" />
       <path d="M10 20 V35 C10 40 50 40 50 35 V20 Z" fill="#2563eb" />
       <ellipse cx="30" cy="35" rx="20" ry="6" fill="#3b82f6" stroke="#2563eb" strokeWidth="0.5" />
-      
+
       <path d="M10 40 V55 C10 60 50 60 50 55 V40 Z" fill="#1d4ed8" />
       <ellipse cx="30" cy="55" rx="20" ry="6" fill="#3b82f6" stroke="#1d4ed8" strokeWidth="0.5" />
     </g>
-    
+
     {/* Gear Icon floating */}
     <g transform="translate(320, 230)" opacity="0.8">
       <circle cx="20" cy="20" r="12" fill="none" stroke="#f59e0b" strokeWidth="5" strokeDasharray="6 3" />
       <circle cx="20" cy="20" r="8" fill="#0f172a" />
     </g>
-    
+
     {/* Tech stack tags floating around */}
     <g transform="translate(30, 220)">
       <rect x="0" y="0" width="65" height="26" rx="6" fill="#2563eb" />
@@ -368,18 +368,18 @@ export default function ServicesPage() {
                     <div className="tech-icon-wrapper">
                       {/* Generates a custom styled initial circle logo */}
                       <svg width="40" height="40" viewBox="0 0 40 40">
-                        <polygon 
-                          points="20,2 38,11 38,29 20,38 2,29 2,11" 
-                          fill={selectedTech === tech.id ? "#2d378b" : "none"} 
-                          stroke="#2d378b" 
+                        <polygon
+                          points="20,2 38,11 38,29 20,38 2,29 2,11"
+                          fill={selectedTech === tech.id ? "#2d378b" : "none"}
+                          stroke="#2d378b"
                           strokeWidth="2"
                         />
-                        <text 
-                          x="20" 
-                          y="25" 
-                          fill={selectedTech === tech.id ? "#ffffff" : "#2d378b"} 
-                          fontSize="14" 
-                          fontWeight="bold" 
+                        <text
+                          x="20"
+                          y="25"
+                          fill={selectedTech === tech.id ? "#ffffff" : "#2d378b"}
+                          fontSize="14"
+                          fontWeight="bold"
                           textAnchor="middle"
                         >
                           {tech.name.substring(0, 2).toUpperCase()}
@@ -449,11 +449,11 @@ export default function ServicesPage() {
           <h2 className="faq-title">Frequently Asked Question</h2>
           <div className="faq-list">
             {faqItems.map((item) => (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 className={`faq-item ${expandedFaq === item.id ? 'active' : ''}`}
               >
-                <button 
+                <button
                   className="faq-trigger"
                   onClick={() => setExpandedFaq(expandedFaq === item.id ? null : item.id)}
                 >

@@ -366,7 +366,7 @@ a:focus {
 
 .features-section-subtitle {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #475569;
   margin-bottom: 3rem;
 }
@@ -388,7 +388,6 @@ a:focus {
 .features-image-container {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .features-image {
@@ -436,7 +435,7 @@ a:focus {
 }
 
 .feature-text-new {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: #334155;
   line-height: 1.6;
 }
@@ -642,7 +641,7 @@ a:focus {
 }
 
 .cta-text-new {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #111111;
   max-width: 850px;
@@ -697,42 +696,37 @@ a:focus {
 }
 
 .portfolio-showcase-new {
-  width: 100%;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-normal);
-  background-color: #f1f5f9;
-}
-
-.portfolio-showcase-new:hover {
-  transform: scale(1.01);
+  padding: 3.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-image-new {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
 .portfolio-details {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 
 .portfolio-title-new {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--navy);
+  color: #000000;
   text-align: left;
   margin-bottom: 0;
 }
 
 .portfolio-desc-new {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
+  color: #000000;
+  font-size: 0.85rem;
   line-height: 1.7;
 }
 
@@ -754,16 +748,21 @@ a:focus {
   cursor: pointer;
   border: 3px solid transparent;
   transition: all var(--transition-normal);
-  background-color: #f1f5f9;
+  background-color: #c4cad6;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: var(--shadow-sm);
 }
 
 .portfolio-thumb-new img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
+  object-fit: contain;
+  opacity: 0.65;
   transition: opacity var(--transition-normal);
+  border-radius: 4px;
 }
 
 .portfolio-thumb-new:hover img {
@@ -1462,7 +1461,7 @@ a:focus {
 /* Service Hero Section */
 .service-hero {
   padding: 6rem 0 4rem 0;
-  background-image: url('/images/bg3.jpg');
+  background-color: #EEEEEE;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1491,7 +1490,7 @@ a:focus {
 }
 
 .service-hero-title {
-  font-size: 3.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
   line-height: 1.15;
   color: #2E3092;
