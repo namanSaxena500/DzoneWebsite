@@ -25,10 +25,10 @@ export default function Navbar() {
         <Link href="/" className="logo" onClick={closeMenu}>
           <img src="/images/Logo.png" alt="Dzone | IT Services" className="logo-image" />
         </Link>
-        
+
         {/* Hamburger Menu Toggle Button */}
-        <button 
-          className="nav-mobile-toggle" 
+        <button
+          className="nav-mobile-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
@@ -37,7 +37,7 @@ export default function Navbar() {
 
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           {/* Services Link & Dropdown */}
-          <li 
+          <li
             className="nav-item has-dropdown"
             onMouseEnter={() => setActiveDropdown('services')}
             onMouseLeave={() => setActiveDropdown(null)}
@@ -46,7 +46,7 @@ export default function Navbar() {
               <Link href="/services" className="nav-link" onClick={closeMenu}>
                 Services
               </Link>
-              <button 
+              <button
                 className="dropdown-caret-btn"
                 onClick={() => handleDropdownToggle('services')}
                 aria-label="Toggle Services Dropdown"
@@ -54,12 +54,12 @@ export default function Navbar() {
                 <ChevronDown size={14} className={`caret-icon ${activeDropdown === 'services' ? 'open' : ''}`} />
               </button>
             </div>
-            
+
             <ul className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}>
               {servicesData.map((service) => (
                 <li key={service.id}>
-                  <Link 
-                    href={`/services/${service.slug}`} 
+                  <Link
+                    href={`/services/${service.slug}`}
                     className="dropdown-item"
                     onClick={closeMenu}
                   >
@@ -71,16 +71,16 @@ export default function Navbar() {
           </li>
 
           {/* Technologies Link & Dropdown */}
-          <li 
+          <li
             className="nav-item has-dropdown"
             onMouseEnter={() => setActiveDropdown('technologies')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
             <div className="nav-dropdown-trigger">
               <Link href="/technology" className="nav-link" onClick={closeMenu}>
-                Technologies
+                Technologies 1
               </Link>
-              <button 
+              <button
                 className="dropdown-caret-btn"
                 onClick={() => handleDropdownToggle('technologies')}
                 aria-label="Toggle Technologies Dropdown"
@@ -88,12 +88,12 @@ export default function Navbar() {
                 <ChevronDown size={14} className={`caret-icon ${activeDropdown === 'technologies' ? 'open' : ''}`} />
               </button>
             </div>
-            
+
             <ul className={`dropdown-menu tech-dropdown-menu ${activeDropdown === 'technologies' ? 'show' : ''}`}>
               {technologiesData.filter(t => ['react', 'nextjs', 'angular', 'vue', 'nodejs', 'reactnative', 'flutter', 'postgresql', 'mongodb', 'figma'].includes(t.id)).map((tech) => (
                 <li key={tech.id}>
-                  <Link 
-                    href={`/technology/${tech.slug}`} 
+                  <Link
+                    href={`/technology/${tech.slug}`}
                     className="dropdown-item"
                     onClick={closeMenu}
                   >
@@ -115,13 +115,13 @@ export default function Navbar() {
               Solution
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link href="/about" className="nav-link" onClick={closeMenu}>
               About
             </Link>
           </li>
-          
+
           {/* Action button inside links list for mobile view */}
           <li className="nav-item nav-mobile-action">
             <Link href="/#contact" className="btn btn-contact" onClick={closeMenu}>
@@ -129,7 +129,7 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-        
+
         {/* Desktop-only action button */}
         <div className="nav-action">
           <Link href="/#contact" className="btn btn-contact">
