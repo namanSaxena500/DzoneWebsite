@@ -1,20 +1,25 @@
 import React from 'react';
-import TechnologyDetailPage from '@/components/TechnologyDetailPage';
-import { technologiesData } from '@/data/technologiesData';
+import Navbar from '@/components/Navbar';
+import ServiceTechnologies from '@/components/ServiceTechnologies';
+import CtaBanner from '@/components/CtaBanner';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
-export async function generateMetadata() {
-  const tech = technologiesData.find((t) => t.slug === 'react');
-  if (!tech) {
-    return {
-      title: 'Technologies | Dzone',
-    };
-  }
-  return {
-    title: `${tech.title} Development Services | Dzone - Tech Agency`,
-    description: tech.desc,
-  };
-}
+export const metadata = {
+  title: 'Technologies & Frameworks We Deploy | Dzone',
+  description: 'Explore our comprehensive tech stack including React, Next.js, Flutter, React Native, Node.js, Go, Python, PostgreSQL, and Figma to build your software products.',
+};
 
 export default function TechnologyIndexPage() {
-  return <TechnologyDetailPage slug="react" />;
+  return (
+    <div>
+      <Navbar />
+      <div style={{ paddingTop: '40px' }}>
+        <ServiceTechnologies />
+      </div>
+      <CtaBanner />
+      <Contact />
+      <Footer />
+    </div>
+  );
 }

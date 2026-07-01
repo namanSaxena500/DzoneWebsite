@@ -48,7 +48,7 @@ export default function About() {
     <section id="about" className="features">
       <div className="container">
         <h2 className="features-section-title">Creating the Modern Web. Expanding Your Digital Prospects</h2>
-        <p className="features-section-subtitle">don't just write code; we build digital foundations.</p>
+        <p className="features-section-subtitle">We don't just write code — we build digital foundations.</p>
         
         <div className="features-grid">
           <div className="features-image-container">

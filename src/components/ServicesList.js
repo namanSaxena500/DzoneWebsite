@@ -40,13 +40,13 @@ export default function ServicesList() {
     <section id="services" className="services">
       <div className="container">
         <h2 className="services-section-title">Our Service</h2>
-        <p className="services-section-subtitle">don't just write code; we build digital foundations.</p>
+        <p className="services-section-subtitle">Built for performance, designed for people.</p>
 
         <div className="services-grid">
           <div className="services-left-col">
             <h3 className="services-left-title">Get the Best With Us</h3>
             <p className="services-left-desc">
-              We leverage modern technology, agile serpentine processes, and senior engineering talent to construct robust foundations for your digital products.
+            Whatever stage your business is at, we bring the right mix of design and engineering talent to get your product to market — without the overhead of building an in-house team.
             </p>
             <div className="services-nav">
               {servicesData.map((item) => (

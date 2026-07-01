@@ -1,20 +1,25 @@
 import React from 'react';
-import ServiceDetailPage from '@/components/ServiceDetailPage';
-import { servicesData } from '@/data/servicesData';
+import Navbar from '@/components/Navbar';
+import ServicesList from '@/components/ServicesList';
+import CtaBanner from '@/components/CtaBanner';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
-export async function generateMetadata() {
-  const service = servicesData.find((s) => s.slug === 'web-dev');
-  if (!service) {
-    return {
-      title: 'Services | Dzone',
-    };
-  }
-  return {
-    title: `${service.title} | Dzone - Tech Agency & Software Development Partner`,
-    description: service.desc,
-  };
-}
+export const metadata = {
+  title: 'Our Software Engineering & Design Services | Dzone',
+  description: 'Explore the full range of custom software development, UI/UX design, mobile applications, cyber security, DevOps, and cloud services offered by Dzone.',
+};
 
 export default function ServicesIndexPage() {
-  return <ServiceDetailPage slug="web-dev" />;
+  return (
+    <div>
+      <Navbar />
+      <div style={{ paddingTop: '40px' }}>
+        <ServicesList />
+      </div>
+      <CtaBanner />
+      <Contact />
+      <Footer />
+    </div>
+  );
 }

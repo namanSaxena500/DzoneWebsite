@@ -17,7 +17,7 @@ const expertises = [
     id: 'healthcare', 
     label: 'Healthcare', 
     icon: <HeartPulse size={18} />, 
-    desc: <>Healthcare Software Development Service Dubai <a href="#">i-HiddenTalent</a> delivers innovative healthcare platforms that help medical organizations enhance patient care and operational efficiency. As a trusted Healthcare Software Development Company in Australia & Dubai, we provide reliable Healthcare Software Development Service Australia & Dubai for hospitals, clinics, and healthcare startups.</>,
+    desc: <>Healthcare Software Development Service Dubai <strong>Dzone</strong> delivers innovative healthcare platforms that help medical organizations enhance patient care and operational efficiency. As a trusted Healthcare Software Development Company in Australia & Dubai, we provide reliable Healthcare Software Development Service Australia & Dubai for hospitals, clinics, and healthcare startups.</>,
     features: [
       'Blazing-Fast Performance that eliminates friction and keeps users engaged.',
       'Robust Scalability that supports massive traffic and long-term growth.',
@@ -28,7 +28,7 @@ const expertises = [
     id: 'insurance', 
     label: 'Insurance', 
     icon: <Shield size={18} />, 
-    desc: <>Insurance Software Development Service Dubai <a href="#">i-HiddenTalent</a> delivers secure insurtech platforms that automate claims management, policy administration, and underwriting workflows. We build user-centric portals and mobile apps with seamless payment pathways and instant quote calculators.</>,
+    desc: <>Insurance Software Development Service Dubai <strong>Dzone</strong> delivers secure insurtech platforms that automate claims management, policy administration, and underwriting workflows. We build user-centric portals and mobile apps with seamless payment pathways and instant quote calculators.</>,
     features: [
       'End-to-end claim processing automation to reduce turnaround time.',
       'Robust security protocols that ensure 100% data privacy.',
@@ -39,7 +39,7 @@ const expertises = [
     id: 'finance', 
     label: 'Banking & Finance', 
     icon: <Landmark size={18} />, 
-    desc: <>Financial Technology Solutions Dubai <a href="#">i-HiddenTalent</a> provide bank-grade encryption, real-time transaction ledgers, and secure integration with global payment networks. We design and engineer next-gen wealth management platforms, banking dashboards, and investment portals.</>,
+    desc: <>Financial Technology Solutions Dubai <strong>Dzone</strong> provides bank-grade encryption, real-time transaction ledgers, and secure integration with global payment networks. We design and engineer next-gen wealth management platforms, banking dashboards, and investment portals.</>,
     features: [
       'Strict regulatory compliance design including PCI-DSS standards.',
       'Real-time analytics dashboards for asset tracking and portfolio growth.',
@@ -50,7 +50,7 @@ const expertises = [
     id: 'retail', 
     label: 'Media & Entertainment', 
     icon: <Film size={18} />, 
-    desc: <>Digital Media & Entertainment Platforms Dubai <a href="#">i-HiddenTalent</a> deliver content delivery network (CDN) optimizations, live streaming solutions, and interactive portals that scale to millions of active users. We create responsive video interfaces and retail shopping networks.</>,
+    desc: <>Digital Media & Entertainment Platforms Dubai <strong>Dzone</strong> delivers content delivery network (CDN) optimizations, live streaming solutions, and interactive portals that scale to millions of active users. We create responsive video interfaces and retail shopping networks.</>,
     features: [
       'Blazing-fast content caching and low-latency video streaming.',
       'Multi-device layout designs ensuring pixel-perfect UX on mobile and TV.',
@@ -61,7 +61,7 @@ const expertises = [
     id: 'it', 
     label: 'Information Technology', 
     icon: <Monitor size={18} />, 
-    desc: <>Custom Software & SaaS Infrastructure Dubai <a href="#">i-HiddenTalent</a> engineering helps modern tech companies deploy highly scalable microservices, cloud workflow automations, and developer utilities. We design and optimize cloud databases for maximum availability and reliability.</>,
+    desc: <>Custom Software & SaaS Infrastructure Dubai <strong>Dzone</strong> engineering helps modern tech companies deploy highly scalable microservices, cloud workflow automations, and developer utilities. We design and optimize cloud databases for maximum availability and reliability.</>,
     features: [
       'Continuous integration and delivery pipelines for zero-downtime releases.',
       'Containerized Docker and Kubernetes deployments for microservice setups.',
@@ -72,7 +72,7 @@ const expertises = [
     id: 'education', 
     label: 'Education', 
     icon: <GraduationCap size={18} />, 
-    desc: <>e-Learning & Education Management Platforms Dubai <a href="#">i-HiddenTalent</a> empower online universities, private academies, and school districts with robust Learning Management Systems (LMS). We design student portals, grade books, and live virtual classrooms.</>,
+    desc: <>e-Learning & Education Management Platforms Dubai <strong>Dzone</strong> empowers online universities, private academies, and school districts with robust Learning Management Systems (LMS). We design student portals, grade books, and live virtual classrooms.</>,
     features: [
       'Interactive whiteboard and real-time student-teacher portal features.',
       'Automated graded assessments and lesson progress trackers.',
@@ -85,7 +85,7 @@ export default function Expertise({
   isStatic = false, 
   title = "IT Outsourcing Domain Expertise",
   subtitle = "don't just write code; we build digital foundations.",
-  staticText = "Healthcare Software Development Service Dubai i-HiddenTalent delivers innovative healthcare platforms that help medical organizations enhance patient care and operational efficiency. As a trusted Healthcare Software Development Company in Australia & Dubai, we provide reliable Healthcare Software Development Service Australia & Dubai for hospitals, clinics, and healthcare startups.",
+  staticText = "Healthcare Software Development Service Dubai Dzone delivers innovative healthcare platforms that help medical organizations enhance patient care and operational efficiency. As a trusted Healthcare Software Development Company in Australia & Dubai, we provide reliable Healthcare Software Development Service Australia & Dubai for hospitals, clinics, and healthcare startups.",
   staticFeatures = [
     'Blazing-Fast Performance that eliminates friction and keeps users engaged.',
     'Robust Scalability that supports massive traffic and long-term growth.',

@@ -257,7 +257,7 @@ export const servicesData = [
   {
     id: 'cloud-services',
     slug: 'cloud-services',
-    title: 'Cloud Services',
+    title: ' Cloud & DevOps Solutions',
     shortTitle: 'Cloud',
     desc: 'Scalable cloud infrastructure architectures on AWS, GCP, and Azure. We plan, deploy, and monitor scalable serverless or microservice structures tailored for high-availability requirements.',
     features: [
@@ -341,7 +341,7 @@ export const servicesData = [
   {
     id: 'cyber-security',
     slug: 'cyber-security',
-    title: 'Cyber Security',
+    title: 'E-Commerce Development',
     shortTitle: 'Security',
     desc: 'Keep your products and user data secure. We implement secure coding practices, HTTPS/TLS standards, encryption, authentication protocols (OAuth, JWT), and conduct penetration vulnerability checks.',
     features: [

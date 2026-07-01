@@ -94,10 +94,11 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-grid">
         <div className="hero-content">
-          <span className="hero-badge">Innovative Digital Agency</span>
+          
           <h1 className="hero-title">Build Your Project with <span>US</span></h1>
           <p className="hero-desc">
-            We create world-class digital experiences, combining top-tier web design with robust cloud architectures. Get your next software idea crafted by professionals.
+           We turn your ideas into scalable digital products. From concept to launch, our team handles design, development, and deployment so you don't have to juggle multiple vendors. <br/>
+          <b> Launch faster. Grow with confidence. Stay ahead of the competition.</b>
           </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">
