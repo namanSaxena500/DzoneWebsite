@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
     };
   }
   return {
-    title: `${service.title} | Dzone - Tech Agency & Software Development Partner`,
-    description: service.desc,
+    title: `Freelance ${service.title} Services in Jaipur | Dzone`,
+    description: `Dzone offers premium freelance ${service.title} services in Jaipur. ${service.desc}`,
   };
 }
 

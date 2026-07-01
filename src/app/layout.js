@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+import PageProgressBar from '@/components/PageProgressBar';
 import './globals.css';
 
 export const metadata = {
@@ -36,6 +38,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <Suspense fallback={null}>
+          <PageProgressBar />
+        </Suspense>
         {children}
       </body>
     </html>

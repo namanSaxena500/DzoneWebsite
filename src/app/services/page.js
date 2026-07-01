@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import ServiceHero from '@/components/ServiceHero';
 import ServicesList from '@/components/ServicesList';
 import CtaBanner from '@/components/CtaBanner';
 import Contact from '@/components/Contact';
@@ -14,9 +15,12 @@ export default function ServicesIndexPage() {
   return (
     <div>
       <Navbar />
-      <div style={{ paddingTop: '40px' }}>
-        <ServicesList />
-      </div>
+      <ServiceHero 
+        title="Our Software Services"
+        desc="We build premium digital products, combining top-tier UI/UX designs, high-performance web development, mobile applications, and secure cloud infrastructures."
+        launchText="UI/UX Design . Web & Mobile Development . Cloud DevOps"
+      />
+      <ServicesList />
       <CtaBanner />
       <Contact />
       <Footer />
