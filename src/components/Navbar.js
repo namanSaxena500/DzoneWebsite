@@ -78,7 +78,7 @@ export default function Navbar() {
           >
             <div className="nav-dropdown-trigger">
               <Link href="/technology" className="nav-link" onClick={closeMenu}>
-                Technologies 1
+                Technologies
               </Link>
               <button
                 className="dropdown-caret-btn"
