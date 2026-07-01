@@ -1,14 +1,20 @@
-import Navbar from '@/components/home/Navbar';
-import Hero from '@/components/home/Hero';
-import About from '@/components/home/About';
-import Services from '@/components/home/Services';
-import CtaBanner from '@/components/home/CtaBanner';
-import Portfolio from '@/components/home/Portfolio';
-import Expertise from '@/components/home/Expertise';
-import WhyUs from '@/components/home/WhyUs';
-import Contact from '@/components/home/Contact';
-import Testimonials from '@/components/home/Testimonials';
-import Footer from '@/components/home/Footer';
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import ServicesList from '@/components/ServicesList';
+import CtaBanner from '@/components/CtaBanner';
+import Portfolio from '@/components/Portfolio';
+import Expertise from '@/components/Expertise';
+import WhyUs from '@/components/WhyUs';
+import Contact from '@/components/Contact';
+import Testimonials from '@/components/Testimonials';
+import Footer from '@/components/Footer';
+
+export const metadata = {
+  title: 'Dzone | Top-Tier Custom Software & Web Development Agency',
+  description: 'Dzone delivers high-performance custom software solutions, modern web application development, mobile apps, and scalable cloud architectures. Partner with expert developers.',
+};
 
 export default function Home() {
   return (
@@ -16,7 +22,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Services />
+      <ServicesList />
       <CtaBanner />
       <Portfolio />
       <Expertise />

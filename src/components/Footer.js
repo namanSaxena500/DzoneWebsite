@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -6,32 +9,32 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid-new">
           <div className="footer-brand-new">
-            <a href="#" className="footer-logo-link-new">
+            <Link href="/" className="footer-logo-link-new">
               <img src="/images/logo2.png" alt="Dzone" className="footer-logo-img-new" />
-            </a>
+            </Link>
             <p className="footer-brand-text-new">
-              Lorem ipsum dolor sit amet consectetur. Sed massa dolor placerat sapien dolor. Lorem ipsum dolor sit amet consectetur. Sed massa dolor placerat sapien dolor. Lorem ipsum dolor sit amet consectetur. Sed...
+              Teams ranging early-stage startups to big businesses approach us when they need web-based solutions that are reliable, come to life, and deliver real-world results.
             </p>
           </div>
           
           <div className="footer-col-new">
             <h4>Expertise</h4>
             <ul className="footer-links-new">
-              <li><a href="#">Reactjs Development</a></li>
-              <li><a href="#">Nextjs Development</a></li>
-              <li><a href="#">React Native Development</a></li>
-              <li><a href="#">Graphic Design</a></li>
-              <li><a href="#">Graphic Design</a></li>
+              <li><Link href="/technology/react">Reactjs Development</Link></li>
+              <li><Link href="/technology/nextjs">Nextjs Development</Link></li>
+              <li><Link href="/technology/reactnative">React Native Development</Link></li>
+              <li><Link href="/technology/figma">Figma UI/UX Design</Link></li>
+              <li><Link href="/technology">All Technologies</Link></li>
             </ul>
           </div>
 
           <div className="footer-col-new">
             <h4>Services</h4>
             <ul className="footer-links-new">
-              <li><a href="#services">Web Development</a></li>
-              <li><a href="#services">Mobile Application</a></li>
-              <li><a href="#services">UI/UX Design</a></li>
-              <li><a href="#">Digital Marketing</a></li>
+              <li><Link href="/services/web-dev">Web Development</Link></li>
+              <li><Link href="/services/mobile-app">Mobile Application</Link></li>
+              <li><Link href="/services/app-design">UI/UX Design</Link></li>
+              <li><Link href="/services/cloud-services">Cloud Infrastructure</Link></li>
             </ul>
           </div>
 
@@ -39,8 +42,8 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul className="footer-links-new">
               <li><a href="tel:+91845168465111">+91 845168465111</a></li>
-              <li><a href="#contact">Address</a></li>
-              <li><a href="#">Links</a></li>
+              <li><Link href="/#contact">Office Address</Link></li>
+              <li><a href="mailto:digitalinfluencerns@gmail.com">digitalinfluencerns@gmail.com</a></li>
             </ul>
           </div>
         </div>

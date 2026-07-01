@@ -1,8 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function AboutProcess() {
   return (
-    <section className="features" style={{ backgroundColor: '#ffffff', padding: '5rem 0' }}>
+    <section className="features" style={{ backgroundColor: '#ffffff' }}>
       <div className="container">
         <div className="features-grid">
           
@@ -23,12 +24,12 @@ export default function AboutProcess() {
           </div>
 
           {/* Right Column: Text Content */}
-          <div className="features-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap : '0.65' }}>
-            <h2 className="features-focus-title" style={{ lineHeight: '1.25', color: '#0f172a', textAlign: 'left' }}>
-              Maintain Your Buisness Growth Timeline With our Unique Develpoment Process
+          <div className="features-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap : '0.65rem' }}>
+            <h2 className="features-focus-title" style={{ lineHeight: '1.25', color: '#0f172a', textAlign: 'left', fontSize: '1.65rem' }}>
+              Maintain Your Business Growth Timeline With our Unique Development Process
             </h2>
             <p className="features-section-subtitle" style={{ fontSize: '0.95rem', lineHeight: '1.7', textAlign: 'left', marginBottom: '1rem' }}>
-              We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.
+              We follow a serpentine development process designed to validate visual aesthetics and user flows at each milestone. Our goal is to launch stable applications with zero bottlenecks.
             </p>
             
             <div className="features-list" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem' }}>
@@ -53,7 +54,9 @@ export default function AboutProcess() {
             </div>
 
             <div>
-              <a href="#contact" className="btn btn-reach-out">Reach Out To Us</a>
+              <Link href="/#contact" className="btn btn-reach-out">
+                Reach Out To Us
+              </Link>
             </div>
           </div>
 

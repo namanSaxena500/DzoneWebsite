@@ -29,14 +29,14 @@ const PortfolioMockup = ({ type }) => {
           
           {/* Cards */}
           <rect x="135" y="65" width="160" height="100" rx="8" fill="#1e293b" />
-          <text x="150" y="95" fill="#fff" fontSize="12" fontWeight="bold">Nikhal Words</text>
+          <text x="150" y="95" fill="#fff" fontSize="12" fontWeight="bold">DZone CMS</text>
           <text x="150" y="115" fill="#94a3b8" fontSize="8">Content Management System</text>
           <rect x="150" y="130" width="60" height="15" rx="4" fill="#10b981" />
           <text x="180" y="140" fill="#fff" fontSize="8" textAnchor="middle" fontWeight="bold">Active</text>
 
           <rect x="310" y="65" width="160" height="100" rx="8" fill="#1e293b" />
           <circle cx="390" cy="115" r="30" fill="none" stroke="#6366f1" strokeWidth="8" strokeDasharray="140 40" />
-          <text x="390" y="119" fill="#fff" fontSize="12" textAnchor="middle" fontWeight="bold">78%</text>
+          <text x="390" y="119" fill="#fff" fontSize="12" textAnchor="middle" fontWeight="bold">94%</text>
 
           {/* Graph/Chart below */}
           <rect x="135" y="180" width="335" height="110" rx="8" fill="#1e293b" />
@@ -88,70 +88,94 @@ const PortfolioMockup = ({ type }) => {
   );
 };
 
-const portfolioItems = [
+const defaultPortfolioItems = [
   {
     id: 0,
-    title: 'Project Title',
-    desc: 'We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.',
-    image: '/images/side2.png'
+    title: 'LeadEngine Portal',
+    desc: 'An automated customer onboarding dashboard built for service businesses. It aggregates leads from social channels, runs background credit audits, schedules callback alerts, and connects seamlessly to HubSpot.',
+    image: '/images/side2.png',
+    mockupType: 'web'
   },
   {
     id: 1,
-    title: 'Earth Skincare',
-    desc: 'A premium design and e-commerce experience for organic skincare products. We crafted a minimal visual language, eco-friendly packaging layouts, and a lightning-fast Shopify storefront that elevates brand presence globally.',
-    image: '/images/side2.png'
+    title: 'Earth Skincare Shop',
+    desc: 'A premium design and e-commerce experience for organic skincare products. We crafted a minimal visual language, eco-friendly packaging layouts, and a lightning-fast storefront that elevates brand presence globally.',
+    image: '/images/side2.png',
+    mockupType: 'web'
   },
   {
     id: 2,
-    title: 'Roof Hotel',
+    title: 'Roof Hotel Booking',
     desc: 'An elegant, interactive booking system and branding package for luxury hospitality. We built custom booking flows, guest portal animations, and a rich, responsive corporate site that enhances direct bookings.',
-    image: '/images/side2.png'
+    image: '/images/side2.png',
+    mockupType: 'web'
   },
   {
     id: 3,
-    title: 'Mattia Restaurant',
+    title: 'Mattia Restaurant CRM',
     desc: 'Art direction, logo design, and high-performance menus for an upscale restaurant group. We designed a cohesive digital identity and table reservation platform that drove bookings up by 45%.',
-    image: '/images/side2.png'
+    image: '/images/side2.png',
+    mockupType: 'web'
   }
 ];
 
-export default function Portfolio() {
+export default function Portfolio({ items = defaultPortfolioItems }) {
   const [activePortfolio, setActivePortfolio] = useState(0);
+
+  // Ensure active index is bounds-safe if dynamic items array is shorter
+  const activeIdx = activePortfolio >= items.length ? 0 : activePortfolio;
+  const currentItem = items[activeIdx];
 
   return (
     <section id="portfolio" className="portfolio">
       <div className="container">
-        <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Contribution To Our Customers' Success</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '3rem', color: '#000000', fontSize: '1.75rem', fontWeight: '700' }}>
+          Contribution To Our Customers' Success
+        </h2>
 
-        <div className="portfolio-grid">
-          <div className="portfolio-showcase-new">
-            <img 
-              src={portfolioItems[activePortfolio].image} 
-              alt={portfolioItems[activePortfolio].title} 
-              className="portfolio-image-new" 
-            />
-          </div>
-          <div className="portfolio-details">
-            <h3 className="portfolio-title-new">{portfolioItems[activePortfolio].title}</h3>
-            <p className="portfolio-desc-new">{portfolioItems[activePortfolio].desc}</p>
-            
-            <div className="portfolio-thumbnails-container">
-              <div className="portfolio-thumbnails-new">
-                {portfolioItems.map((item, idx) => (
-                  <div 
-                    key={item.id}
-                    className={`portfolio-thumb-new ${activePortfolio === idx ? 'active' : ''}`}
-                    onClick={() => setActivePortfolio(idx)}
-                  >
-                    <img src="/images/side2.png" alt={item.title} />
-                  </div>
-                ))}
+        {currentItem ? (
+          <div className="portfolio-grid">
+            <div className="portfolio-showcase-new">
+              {currentItem.mockupType ? (
+                <PortfolioMockup type={currentItem.mockupType} />
+              ) : currentItem.image ? (
+                <img 
+                  src={currentItem.image} 
+                  alt={currentItem.title} 
+                  className="portfolio-image-new" 
+                />
+              ) : (
+                <PortfolioMockup type="web" />
+              )}
+            </div>
+            <div className="portfolio-details">
+              <h3 className="portfolio-title-new">{currentItem.title}</h3>
+              <p className="portfolio-desc-new">{currentItem.desc}</p>
+              
+              <div className="portfolio-thumbnails-container">
+                <div className="portfolio-thumbnails-new">
+                  {items.map((item, idx) => (
+                    <div 
+                      key={item.id}
+                      className={`portfolio-thumb-new ${activeIdx === idx ? 'active' : ''}`}
+                      onClick={() => setActivePortfolio(idx)}
+                    >
+                      {item.image ? (
+                        <img src={item.image} alt={item.title} />
+                      ) : (
+                        <div className="placeholder-thumb">PROJ</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <p style={{ textAlign: 'center' }}>No projects available.</p>
+        )}
       </div>
     </section>
   );
 }
-export { PortfolioMockup, portfolioItems };
+export { PortfolioMockup, defaultPortfolioItems as portfolioItems };

@@ -47,7 +47,7 @@ export default function Contact() {
           email: '',
           phoneCode: '+91',
           phoneNumber: '',
-          service: 'Web Development',
+          service: '',
           message: ''
         });
       } else {
@@ -68,7 +68,7 @@ export default function Contact() {
             <span className="contact-subtitle-new">GET A FREE ESTIMATE</span>
             <h2 className="contact-title-new">Want To Grow your Business ?</h2>
             <p className="contact-desc-new">
-              Lorem ipsum dolor sit amet consectetur. Sed massa dolor placerat sapien dolor. Rhoncus sociis nunc libero id eros id etiam pharetra..
+              Let's build something amazing together. Reach out to Dzone to consult with our software experts, get a cost projection, and formulate a technical execution path.
             </p>
           </div>
 

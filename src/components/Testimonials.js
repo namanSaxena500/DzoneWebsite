@@ -33,7 +33,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="container">
-        <h2>What Our Clients Say</h2>
+        <h2 style={{ fontSize: '1.75rem' }}>What Our Clients Say</h2>
         <p className="section-description">
           Read stories of how we partnered with clients to bring success.
         </p>
@@ -64,12 +64,14 @@ export default function Testimonials() {
             <button 
               className="control-btn"
               onClick={() => setCurrentTestimonial(prev => (prev === 0 ? testimonials.length - 1 : prev - 1))}
+              aria-label="Previous Testimonial"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               className="control-btn"
               onClick={() => setCurrentTestimonial(prev => (prev === testimonials.length - 1 ? 0 : prev + 1))}
+              aria-label="Next Testimonial"
             >
               <ChevronRight size={20} />
             </button>
