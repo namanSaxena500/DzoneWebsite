@@ -17,11 +17,12 @@ export async function POST(request) {
     // Configure Nodemailer transporter
     // Env vars are loaded automatically in Next.js from .env.local
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.mailtrap.io',
-      port: parseInt(process.env.SMTP_PORT || '2525', 10),
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: false, // Port 587 uses STARTTLS
       auth: {
-        user: process.env.SMTP_USER || '',
-        pass: process.env.SMTP_PASS || '',
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
@@ -61,6 +62,9 @@ ${message}
     };
 
     // Send the mail
+    await transporter.verify();
+
+    console.log("SMTP Connected Successfully");
     const info = await transporter.sendMail(mailOptions);
 
     console.log('Message sent: %s', info.messageId);
