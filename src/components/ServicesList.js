@@ -39,7 +39,7 @@ export default function ServicesList() {
   return (
     <section id="services" className="services">
       <div className="container">
-        <h2 className="services-section-title">Our Service</h2>
+        <h2 className="services-section-title"> Service</h2>
         <p className="services-section-subtitle">Built for performance, designed for people.</p>
 
         <div className="services-grid">
