@@ -94,11 +94,10 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-grid">
         <div className="hero-content">
-          
+          <span className="hero-badge">Freelance IT Services in Jaipur</span>
           <h1 className="hero-title">Build Your Project with <span>US</span></h1>
           <p className="hero-desc">
-           We turn your ideas into scalable digital products. From concept to launch, our team handles design, development, and deployment so you don't have to juggle multiple vendors. <br/>
-          <b> Launch faster. Grow with confidence. Stay ahead of the competition.</b>
+            Dzone delivers world-class web development and freelance IT services in Jaipur. We combine top-tier web design with robust cloud architectures to turn your software ideas into high-converting realities.
           </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">

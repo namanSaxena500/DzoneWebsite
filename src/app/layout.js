@@ -2,8 +2,8 @@ import './globals.css';
 
 export const metadata = {
   metadataBase: new URL('https://dzone.ae'),
-  title: 'Dzone - Tech Agency & Software Development Partner',
-  description: 'We build the modern web, expand your digital prospects, and offer expert IT outsourcing services in healthcare, finance, education, and more.',
+  title: 'Dzone - Freelance IT Services & Web Development Partner',
+  description: 'Dzone delivers top-tier freelance IT services and custom web development in Jaipur. We build responsive web apps, mobile solutions, and cloud architectures.',
   icons: {
     icon: '/favicon.ico',
   },

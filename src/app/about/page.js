@@ -11,8 +11,8 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'About Us | Dzone - Tech Agency & Software Development Partner',
-  description: 'Learn about Dzone, our serpentine development process, domain expertise in custom software, and technologies we specialize in.',
+  title: 'About Us | Dzone - Freelance IT Consulting & Web Development',
+  description: 'Learn about Dzone, our freelance IT services and web development presence in Jaipur. Explore our engineering process, domain expertise, and core technologies.',
 };
 
 export default function AboutPage() {

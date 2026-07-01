@@ -12,8 +12,8 @@ import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Dzone | Top-Tier Custom Software & Web Development Agency',
-  description: 'Dzone delivers high-performance custom software solutions, modern web application development, mobile apps, and scalable cloud architectures. Partner with expert developers.',
+  title: 'Freelance IT Services & Web Development in Jaipur | Dzone',
+  description: 'Looking for freelance IT services or expert web development in Jaipur? Dzone provides top-tier custom software development, mobile apps, and scalable cloud architectures. Partner with expert developers today.',
 };
 
 export default function Home() {
