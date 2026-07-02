@@ -56,7 +56,7 @@ ${message}
             <p style="white-space: pre-wrap; margin: 0; line-height: 1.5; color: #475569;">${message}</p>
           </div>
           <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0 15px 0;" />
-          <p style="font-size: 0.8rem; color: #94a3b8; text-align: center; margin: 0;">Sent automatically via Dzone Web Portal</p>
+          <p style="font-size: 0.8rem; color: #94a3b8; text-align: center; margin: 0;">Sent automatically via Dzone Web Portals</p>
         </div>
       `,
     };
