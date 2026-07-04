@@ -16,7 +16,7 @@ export default function Footer() {
               Teams ranging early-stage startups to big businesses approach us when they need web-based solutions that are reliable, come to life, and deliver real-world results.
             </p>
           </div>
-          
+
           <div className="footer-col-new">
             <h4>Expertise</h4>
             <ul className="footer-links-new">
@@ -41,8 +41,12 @@ export default function Footer() {
           <div className="footer-col-new">
             <h4>Contact</h4>
             <ul className="footer-links-new">
-              <li><a href="tel:+91845168465111">+91 845168465111</a></li>
-              <li><Link href="/#contact">Office Address</Link></li>
+              <li><a href="tel:+917240621224">+91 7240621224</a></li>
+              <li>
+                <a href="https://maps.app.goo.gl/VAiAnQBA2XLc4Eeq7" target="_blank" rel="noopener noreferrer" style={{ lineHeight: '1.5', display: 'inline-block' }}>
+                  258, Katewa Nagar, Devi Nagar,<br />Shyam Nagar, Jaipur,<br />Rajasthan - 302019
+                </a>
+              </li>
               <li><a href="mailto:digitalinfluencerns@gmail.com">digitalinfluencerns@gmail.com</a></li>
             </ul>
           </div>

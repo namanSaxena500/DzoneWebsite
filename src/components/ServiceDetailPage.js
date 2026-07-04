@@ -34,6 +34,7 @@ export default function ServiceDetailPage({ slug }) {
       <ServicesGrid 
         title={`Our ${service.title} Offerings`}
         services={service.subServices}
+        slug={slug}
       />
       <ServiceBest 
         title={service.bestGotTitle}

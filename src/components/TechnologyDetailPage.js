@@ -35,10 +35,12 @@ export default function TechnologyDetailPage({ slug }) {
         title={tech.introTitle}
         desc={tech.introDesc}
         imageSrc={tech.introImage || "/images/abouttechleftinmage.png"}
+        slug={slug}
       />
       <ServicesGrid 
         title={tech.featuresTitle || `What Makes ${tech.title} Unique`}
         services={tech.features}
+        slug={slug}
       />
       <Portfolio />
       <Expertise isStatic={true} />

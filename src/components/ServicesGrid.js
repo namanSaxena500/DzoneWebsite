@@ -48,10 +48,13 @@ const defaultSubServices = [
   }
 ];
 
+import UniquePageVisual from './UniquePageVisual';
+
 export default function ServicesGrid({ 
   title = "Our Specialized Solutions", 
   subtitle = "We cover the full spectrum of development, offering tailored services that align with your business model and industry requirements.",
-  services = defaultSubServices 
+  services = defaultSubServices,
+  slug = ""
 }) {
   return (
     <section className="service-grid-section">
@@ -65,8 +68,8 @@ export default function ServicesGrid({
           {services.map((card) => {
             if (card.isImage) {
               return (
-                <div key={card.id} className="service-card-new image-card">
-                  <img src={card.image} alt="Office team" className="service-card-image" />
+                <div key={card.id} className="service-card-new image-card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0f172a', borderRadius: '12px' }}>
+                  <UniquePageVisual slug={slug} type="feature" fallbackImage={card.image} />
                 </div>
               );
             }

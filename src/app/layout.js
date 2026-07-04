@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     "description": "We build the modern web, expand your digital prospects, and offer expert IT outsourcing services in healthcare, finance, education, and more.",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-845168465111",
+      "telephone": "+91-7240621224",
       "contactType": "customer service",
       "email": "digitalinfluencerns@gmail.com"
     }

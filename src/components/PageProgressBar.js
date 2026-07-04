@@ -13,6 +13,11 @@ export default function PageProgressBar() {
     // Reset/Stop loading when pathname or search parameters change
     setLoading(false);
     setProgress(0);
+    
+    // Auto-scroll to top when page changes
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
   }, [pathname, searchParams]);
 
   useEffect(() => {

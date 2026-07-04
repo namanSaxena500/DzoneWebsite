@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+import UniquePageVisual from './UniquePageVisual';
 
 export default function TechIntro({
   title = "Let's Understand Something About This Tech",
   desc = "We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand. We deliver creative UI/UX, high-performing websites, and standout visuals to power your brand.",
   buttonText = "Reach Out To Us",
   buttonHref = "/#contact",
-  imageSrc = "/images/abouttechleftinmage.png"
+  imageSrc = "/images/abouttechleftinmage.png",
+  slug = ""
 }) {
   return (
     <section className="features">
@@ -34,18 +36,9 @@ export default function TechIntro({
             </div>
           </div>
 
-          {/* Right Column: Laptop Image Mockup */}
-          <div className="hero-image-container">
-            <img 
-              src={imageSrc} 
-              alt={title} 
-              className="features-image"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block'
-              }}
-            />
+          {/* Right Column: Dynamic Unique Mockup */}
+          <div className="hero-image-container" style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}>
+            <UniquePageVisual slug={slug} type="intro" fallbackImage={imageSrc} />
           </div>
 
         </div>

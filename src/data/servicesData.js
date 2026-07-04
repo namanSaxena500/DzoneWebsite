@@ -19,7 +19,7 @@ export const servicesData = [
     heroLaunch: 'Engage Users . Convert Leads . Establish Brand Authority',
     bestGotTitle: 'Crafting Visual Identities',
     bestGotDesc: 'Our UI/UX design process centers on the user. We combine qualitative research with pixel-perfect visuals, micro-animations, and smooth transition frameworks to create interfaces that feel natural, premium, and extremely satisfying to interact with.',
-    bestGotImage: '/images/bg4.png',
+    bestGotImage: '/images/service_ux_intro.png',
     techIds: ['figma', 'adobexd', 'sketch'],
     subServices: [
       {
@@ -45,7 +45,7 @@ export const servicesData = [
       {
         id: 5,
         isImage: true,
-        image: '/images/side1.png'
+        image: '/images/service_ux_feature.png'
       },
       {
         id: 6,
@@ -103,7 +103,7 @@ export const servicesData = [
     heroLaunch: 'Launch Faster . Scale Effortlessly . Capture Search Traffic',
     bestGotTitle: 'High-Performance Web Engineering',
     bestGotDesc: 'We construct bespoke web applications that solve your business challenges. Unlike generic tools, our custom solutions are designed around your workflows, processes, and user needs, using frameworks that score perfect Core Web Vitals.',
-    bestGotImage: '/images/bg4.png',
+    bestGotImage: '/images/service_web_intro.png',
     techIds: ['react', 'nextjs', 'angular', 'vue', 'html5', 'css3', 'nodejs', 'python', 'go', 'java', 'postgresql', 'mongodb', 'mysql'],
     subServices: [
       {
@@ -129,7 +129,7 @@ export const servicesData = [
       {
         id: 5,
         isImage: true,
-        image: '/images/side1.png'
+        image: '/images/service_web_intro.png'
       },
       {
         id: 6,
@@ -187,7 +187,7 @@ export const servicesData = [
     heroLaunch: 'Engage Mobile Users . Publish to App Stores . Optimize Conversions',
     bestGotTitle: 'Uncompromising Mobile Apps',
     bestGotDesc: 'We construct natively compiled mobile applications with high-fps animations, smooth transitions, and stable background sync capability, helping you connect with users directly on their smartphones.',
-    bestGotImage: '/images/bg4.png',
+    bestGotImage: '/images/service_mobile_intro.png',
     techIds: ['reactnative', 'flutter', 'swift', 'kotlin'],
     subServices: [
       {
@@ -213,7 +213,7 @@ export const servicesData = [
       {
         id: 5,
         isImage: true,
-        image: '/images/side1.png'
+        image: '/images/tech_mobile.png'
       },
       {
         id: 6,
@@ -271,7 +271,7 @@ export const servicesData = [
     heroLaunch: 'Maximize Availability . Dynamic Autoscale . Trim Server Bills',
     bestGotTitle: 'Bank-Grade Cloud Engineering',
     bestGotDesc: 'We specialize in containerization, serverless functions, database replication, and CDN routing on Amazon Web Services (AWS) and Google Cloud Platform (GCP) to guarantee absolute resilience and low-latency client experiences.',
-    bestGotImage: '/images/bg4.png',
+    bestGotImage: '/images/service_cloud_intro.png',
     techIds: ['nodejs', 'python', 'go', 'java', 'postgresql', 'mongodb', 'mysql'],
     subServices: [
       {
@@ -297,7 +297,7 @@ export const servicesData = [
       {
         id: 5,
         isImage: true,
-        image: '/images/side1.png'
+        image: '/images/tech_backend.png'
       },
       {
         id: 6,
@@ -339,86 +339,86 @@ export const servicesData = [
     ]
   },
   {
-    id: 'cyber-security',
-    slug: 'cyber-security',
+    id: 'ecommerce-development',
+    slug: 'ecommerce-development',
     title: 'E-Commerce Development',
-    shortTitle: 'Security',
-    desc: 'Keep your products and user data secure. We implement secure coding practices, HTTPS/TLS standards, encryption, authentication protocols (OAuth, JWT), and conduct penetration vulnerability checks.',
+    shortTitle: 'E-Commerce',
+    desc: 'High-performance, secure e-commerce storefront development. We build custom shop systems, Shopify setups, WooCommerce solutions, and payment gateway integrations optimized for conversions and search rankings in Jaipur and globally.',
     features: [
-      'Data Encryption at Rest & Flight',
-      'OAuth2 & Multi-Factor Auth',
-      'Vulnerability scanning',
-      'GDPR & HIPAA compliance design'
+      'Custom Checkout & Cart Flows',
+      'Secure Payment Integrations',
+      'Inventory & Catalog Systems',
+      'SEO Optimized Storefronts'
     ],
-    heroTitle: 'Cyber Security & Data Protection',
-    heroDesc: 'Defending your software platforms against cyber threats, data breaches, and API vulnerabilities. Secure coding, regular penetration audits, and strict standards compliance.',
-    heroLaunch: 'Protect User Privacy . Assure Security Compliance . Mitigate Cyber Threats',
-    bestGotTitle: 'Hardened Security Infrastructure',
-    bestGotDesc: 'We install rigorous authentication standards, encrypt data at every step (AES-256), and perform structural vulnerability audits to protect your company\'s resources and ensure 100% compliance with industry guidelines.',
-    bestGotImage: '/images/bg4.png',
-    techIds: ['postgresql', 'mongodb', 'mysql'],
+    heroTitle: 'E-Commerce Web Design & Development',
+    heroDesc: 'Launch a stunning online storefront that drives sales. We design fast, mobile-friendly, secure e-commerce systems optimized to rank #1 on Google.',
+    heroLaunch: 'Sell Online . Accept Secure Payments . Rank Higher on Google',
+    bestGotTitle: 'Converting Visitors into Loyal Customers',
+    bestGotDesc: 'We engineer high-performance, fast-loading online store architectures. From headless commerce to customized checkouts, we ensure a seamless purchase flow that reduces cart abandonment and boosts search visibility.',
+    bestGotImage: '/images/portfolio_skincare.png',
+    techIds: ['react', 'nextjs', 'nodejs', 'postgresql', 'mongodb', 'mysql'],
     subServices: [
       {
         id: 1,
-        title: 'Application Penetration Testing',
-        desc: 'Simulating active cyber attacks on your apps to discover code vulnerabilities, injection threats, and session hijack risks.'
+        title: 'Custom E-Commerce Platform Design',
+        desc: 'We build bespoke online shops tailor-made for your unique brand experience, catalog structures, and customer user journeys.'
       },
       {
         id: 2,
-        title: 'Secure Authentication Setup',
-        desc: 'Integrating multi-factor authentication (MFA), password hashing (bcrypt), and secure OAuth2/OpenID flows to block unauthorized entry.'
+        title: 'Shopify & WooCommerce Setup',
+        desc: 'Designing, customizing, and launching premium Shopify or WordPress WooCommerce store themes to get your sales live fast.'
       },
       {
         id: 3,
-        title: 'API Gateway & Protection',
-        desc: 'Configuring rate-limiting, CORS guidelines, and request validation filters to block scraping, DDoS attacks, and API exploitation.'
+        title: 'Headless Commerce Architecture',
+        desc: 'Decoupling frontend store interfaces using React/Next.js from backend engines to deliver page speeds under 1 second.'
       },
       {
         id: 4,
-        title: 'Data Encryption (Rest & Flight)',
-        desc: 'Ensuring all database files, user passwords, and API payloads use industry-standard SSL/TLS and AES encryption algorithms.'
+        title: 'Secure Payment Integrations',
+        desc: 'Connecting popular gateways like Razorpay, Paytm, Stripe, and PayPal to secure friction-free transactions.'
       },
       {
         id: 5,
         isImage: true,
-        image: '/images/side1.png'
+        image: '/images/portfolio_restaurant.png'
       },
       {
         id: 6,
-        title: 'Compliance-Ready Architecture',
-        desc: 'Designing database storage and privacy systems to fulfill strict HIPAA (health), GDPR (Europe), and PCI-DSS (payments) audits.'
+        title: 'Inventory & Order Management',
+        desc: 'Synchronizing your digital store catalog with physical stock levels, warehouse data, and shipping logistics pipelines.'
       },
       {
         id: 7,
-        title: 'Vulnerability Scanning & Patching',
-        desc: 'Scheduling automated code analyzers to detect outdated dependencies and security warnings in development packages.'
+        title: 'Mobile-Optimized Storefronts',
+        desc: 'Developing responsive layouts that guarantee seamless shopping experiences on smartphones and tablets.'
       },
       {
         id: 8,
-        title: 'Cloud IAM Security Policies',
-        desc: 'Configuring least-privilege cloud permissions, restricting port access, and securing database networks behind private subnets.'
+        title: 'Store Migration & Data Porting',
+        desc: 'Moving products, order histories, and customer accounts from legacy platforms to modern engines with zero SEO ranking loss.'
       },
       {
         id: 9,
-        title: 'Security Audits & Incident Planning',
-        desc: 'Drafting structured response templates for potential breaches, setting up log tracking, and delivering security reports.'
+        title: 'E-Commerce SEO & Performance Audits',
+        desc: 'Optimizing meta tags, schemas, product descriptions, and core web vitals to place your store on Google page 1 in Jaipur.'
       }
     ],
     faq: [
       {
         id: 1,
-        question: 'How do you protect database information?',
-        answer: 'We store all passwords using salted hashes (bcrypt) and encrypt sensitive user details at rest (AES-256) and in transit using SSL/TLS.'
+        question: 'Which e-commerce engine is right for my online shop?',
+        answer: 'For standard retail shops, Shopify or WooCommerce is ideal due to quick launching. For custom enterprise scale storefronts with complex rules, custom headless setups are recommended.'
       },
       {
         id: 2,
-        question: 'What is a penetration test?',
-        answer: 'A penetration test is a controlled test of your system where our experts attempt to hack the application to find weaknesses before real hackers can.'
+        question: 'Are e-commerce sites optimized for Google search?',
+        answer: 'Yes! We implement schema markup, fast image delivery, clean URL hierarchies, and custom meta keywords to ensure maximum visibility for product searches.'
       },
       {
         id: 3,
-        question: 'Are your designs compliant with GDPR/HIPAA?',
-        answer: 'Yes! We follow compliance-by-design guidelines, ensuring user data privacy consent and audit logging are built into the architecture.'
+        question: 'How do you secure payment processing?',
+        answer: 'We integrate PCI-DSS compliant payment gateways, forcing HTTPS encryption and JWT authentication to protect user credit card details.'
       }
     ]
   },
@@ -439,7 +439,7 @@ export const servicesData = [
     heroLaunch: 'Automate Deployments . Catch Bugs Early . Guarantee Zero Downtime',
     bestGotTitle: 'Zero-Friction Release Engineering',
     bestGotDesc: 'We use CI/CD scripts, containerized virtualization, and automated unit/integration suites (Jest, Cypress) to ensure every updates file gets validated, built, and deployed safely with absolutely zero human error.',
-    bestGotImage: '/images/bg4.png',
+    bestGotImage: '/images/service_devops_intro.png',
     techIds: ['nodejs', 'python', 'go', 'java'],
     subServices: [
       {
@@ -465,7 +465,7 @@ export const servicesData = [
       {
         id: 5,
         isImage: true,
-        image: '/images/side1.png'
+        image: '/images/service_web_feature.png'
       },
       {
         id: 6,

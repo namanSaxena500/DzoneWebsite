@@ -27,8 +27,8 @@ export default function ServicesList() {
         return <LucideIcons.Smartphone size={20} />;
       case 'cloud-services':
         return <LucideIcons.Cloud size={20} />;
-      case 'cyber-security':
-        return <LucideIcons.Lock size={20} />;
+      case 'ecommerce-development':
+        return <LucideIcons.ShoppingBag size={20} />;
       case 'devops-qa':
         return <LucideIcons.Activity size={20} />;
       default:

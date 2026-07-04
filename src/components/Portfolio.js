@@ -93,29 +93,25 @@ const defaultPortfolioItems = [
     id: 0,
     title: 'LeadEngine Portal',
     desc: 'An automated customer onboarding dashboard built for service businesses. It aggregates leads from social channels, runs background credit audits, schedules callback alerts, and connects seamlessly to HubSpot.',
-    image: '/images/side2.png',
-    mockupType: 'web'
+    image: '/images/portfolio_leadengine.png'
   },
   {
     id: 1,
     title: 'Earth Skincare Shop',
     desc: 'A premium design and e-commerce experience for organic skincare products. We crafted a minimal visual language, eco-friendly packaging layouts, and a lightning-fast storefront that elevates brand presence globally.',
-    image: '/images/side2.png',
-    mockupType: 'web'
+    image: '/images/portfolio_skincare.png'
   },
   {
     id: 2,
     title: 'Roof Hotel Booking',
     desc: 'An elegant, interactive booking system and branding package for luxury hospitality. We built custom booking flows, guest portal animations, and a rich, responsive corporate site that enhances direct bookings.',
-    image: '/images/side2.png',
-    mockupType: 'web'
+    image: '/images/portfolio_hotel.png'
   },
   {
     id: 3,
     title: 'Mattia Restaurant CRM',
     desc: 'Art direction, logo design, and high-performance menus for an upscale restaurant group. We designed a cohesive digital identity and table reservation platform that drove bookings up by 45%.',
-    image: '/images/side2.png',
-    mockupType: 'web'
+    image: '/images/portfolio_restaurant.png'
   }
 ];
 
@@ -136,13 +132,12 @@ export default function Portfolio({ items = defaultPortfolioItems }) {
         {currentItem ? (
           <div className="portfolio-grid">
             <div className="portfolio-showcase-new">
-              {currentItem.mockupType ? (
-                <PortfolioMockup type={currentItem.mockupType} />
-              ) : currentItem.image ? (
+              {currentItem.image ? (
                 <img 
                   src={currentItem.image} 
                   alt={currentItem.title} 
                   className="portfolio-image-new" 
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block', objectFit: 'cover' }}
                 />
               ) : (
                 <PortfolioMockup type="web" />
