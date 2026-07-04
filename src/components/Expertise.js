@@ -119,7 +119,7 @@ export default function Expertise({
           }}
         />
 
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, paddingBottom: '80px' }}>
           {/* Section Header */}
           <h2 style={{ color: '#000000', textAlign: 'center', fontSize: '2rem', fontWeight: 700, marginBottom: '0.5rem' }}>
             {title}
@@ -196,7 +196,8 @@ export default function Expertise({
                   alignItems: 'center',
                   justifyContent: 'center',
                   border: 'none',
-                  height: '48px'
+                  height: '48px',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 Reach Out To Us
