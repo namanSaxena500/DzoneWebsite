@@ -13,6 +13,7 @@ import Portfolio from '@/components/Portfolio';
 import Expertise from '@/components/Expertise';
 import WhyUs from '@/components/WhyUs';
 import Contact from '@/components/Contact';
+import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
 
@@ -50,6 +51,7 @@ export default function ServiceDetailPage({ slug }) {
       <WhyUs />
       <Contact />
       <Faq items={service.faq} />
+      <Testimonials />
       <Footer />
     </div>
   );

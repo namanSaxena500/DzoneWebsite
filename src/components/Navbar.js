@@ -2,9 +2,40 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Layers, 
+  Globe, 
+  Smartphone, 
+  Cloud, 
+  ShoppingBag, 
+  Activity 
+} from 'lucide-react';
 import { servicesData } from '@/data/servicesData';
 import { technologiesData } from '@/data/technologiesData';
+import TechLogo from '@/components/TechLogo';
+
+// Helper to dynamically render service icons
+const renderServiceIcon = (slug) => {
+  switch (slug) {
+    case 'app-design':
+      return <Layers size={18} />;
+    case 'web-dev':
+      return <Globe size={18} />;
+    case 'mobile-app':
+      return <Smartphone size={18} />;
+    case 'cloud-services':
+      return <Cloud size={18} />;
+    case 'ecommerce-development':
+      return <ShoppingBag size={18} />;
+    case 'devops-qa':
+      return <Activity size={18} />;
+    default:
+      return <Layers size={18} />;
+  }
+};
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,17 +98,30 @@ export default function Navbar() {
             </div>
 
             <ul className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}>
-              {servicesData.map((service) => (
-                <li key={service.id}>
-                  <Link
-                     href={`/services/${service.slug}`}
-                     className="dropdown-item"
-                     onClick={closeMenu}
-                  >
-                    {service.title}
-                  </Link>
+              <div className="dropdown-inner-container">
+                <li className="dropdown-banner-container">
+                  <div className="dropdown-left-banner"></div>
                 </li>
-              ))}
+                <li className="dropdown-divider-vertical"></li>
+                <li className="dropdown-grid-container">
+                  <ul className="dropdown-grid">
+                    {servicesData.map((service) => (
+                      <li key={service.id}>
+                        <Link
+                           href={`/services/${service.slug}`}
+                           className="dropdown-grid-link"
+                           onClick={closeMenu}
+                        >
+                          <span className="dropdown-grid-icon">
+                            {renderServiceIcon(service.slug)}
+                          </span>
+                          <span className="dropdown-grid-text">{service.title}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              </div>
             </ul>
           </li>
 
@@ -101,23 +145,35 @@ export default function Navbar() {
             </div>
 
             <ul className={`dropdown-menu tech-dropdown-menu ${activeDropdown === 'technologies' ? 'show' : ''}`}>
-              {technologiesData.filter(t => ['react', 'nextjs', 'angular', 'vue', 'nodejs', 'reactnative', 'flutter', 'postgresql', 'mongodb', 'figma'].includes(t.id)).map((tech) => (
-                <li key={tech.id}>
-                  <Link
-                    href={`/technology/${tech.slug}`}
-                    className="dropdown-item"
-                    onClick={closeMenu}
-                  >
-                    {tech.title}
-                  </Link>
+              <div className="dropdown-inner-container">
+                <li className="dropdown-banner-container">
+                  <div className="dropdown-left-banner"></div>
                 </li>
-              ))}
-              <li className="dropdown-divider"></li>
-              <li>
-                <Link href="/technology" className="dropdown-item view-all-link" onClick={closeMenu}>
-                  View All Technologies
-                </Link>
-              </li>
+                <li className="dropdown-divider-vertical"></li>
+                <li className="dropdown-grid-container">
+                  <ul className="dropdown-grid">
+                    {technologiesData.filter(t => ['react', 'nextjs', 'angular', 'vue', 'nodejs', 'reactnative', 'flutter', 'postgresql', 'mongodb', 'figma'].includes(t.id)).map((tech) => (
+                      <li key={tech.id}>
+                        <Link
+                          href={`/technology/${tech.slug}`}
+                          className="dropdown-grid-link"
+                          onClick={closeMenu}
+                        >
+                          <span className="dropdown-grid-icon tech-logo-wrapper">
+                            <TechLogo id={tech.id} className="tech-logo-svg" />
+                          </span>
+                          <span className="dropdown-grid-text">{tech.title}</span>
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="dropdown-grid-item view-all-grid-item">
+                      <Link href="/technology" className="dropdown-grid-link view-all-link" onClick={closeMenu}>
+                        View All Technologies →
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              </div>
             </ul>
           </li>
 
@@ -142,7 +198,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-
     </nav>
   );
 }

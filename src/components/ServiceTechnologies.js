@@ -15,10 +15,8 @@ export default function ServiceTechnologies({ techIds = [] }) {
     database: { label: 'Database' }
   };
 
-  // Filter tech items based on techIds prop, or show all if empty
-  const filteredTechs = techIds.length > 0 
-    ? technologiesData.filter(t => techIds.includes(t.id))
-    : technologiesData;
+  // Show all technologies on every page (fixed view per user request)
+  const filteredTechs = technologiesData;
 
   // Group filtered techs by category
   const groupedTechs = {};
@@ -107,9 +105,7 @@ export default function ServiceTechnologies({ techIds = [] }) {
                     }}
                   >
                     <div className="tech-icon-wrapper">
-                      <div style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <TechLogo id={tech.id} className="tech-logo-svg" />
-                      </div>
+                      <TechLogo id={tech.id} className="tech-logo-svg" />
                     </div>
                     <span className="tech-icon-label">{tech.title}</span>
                   </div>

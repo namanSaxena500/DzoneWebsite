@@ -18,18 +18,8 @@ export default function TechLogo({ id, className }) {
       return (
         <svg viewBox="0 0 180 180" className={className} width="100%" height="auto">
           <circle cx="90" cy="90" r="90" fill="#000000"/>
-          <path d="M149.508 157.52L69.142 54.0001H54V126H66.086V71.858L134.422 159.986C139.758 156.402 144.82 152.202 149.508 157.52Z" fill="url(#nextjsLogoGrad)"/>
-          <rect x="115" y="54" width="12" height="72" fill="url(#nextjsLogoGrad2)"/>
-          <defs>
-            <linearGradient id="nextjsLogoGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
-              <stop stopColor="white"/>
-              <stop offset="1" stopColor="white" stopOpacity="0"/>
-            </linearGradient>
-            <linearGradient id="nextjsLogoGrad2" x1="121" y1="54" x2="121" y2="126" gradientUnits="userSpaceOnUse">
-              <stop stopColor="white"/>
-              <stop offset="1" stopColor="white" stopOpacity="0"/>
-            </linearGradient>
-          </defs>
+          <path d="M149.508 157.52L69.142 54.0001H54V126H66.086V71.858L134.422 159.986C139.758 156.402 144.82 152.202 149.508 157.52Z" fill="#ffffff"/>
+          <rect x="115" y="54" width="12" height="72" fill="#ffffff"/>
         </svg>
       );
     case 'angular':

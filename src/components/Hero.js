@@ -105,9 +105,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-image-container">
-          <HeroIllustration />
-        </div>
       </div>
     </section>
   );

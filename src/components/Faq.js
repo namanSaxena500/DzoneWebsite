@@ -44,7 +44,9 @@ export default function Faq({ items = defaultFaqItems }) {
                 <ChevronDown className="faq-chevron" size={16} />
               </button>
               <div className="faq-content">
-                <p className="faq-text">{item.answer}</p>
+                <div className="faq-content-inner">
+                  <p className="faq-text">{item.answer}</p>
+                </div>
               </div>
             </div>
           ))}

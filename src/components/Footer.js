@@ -47,7 +47,7 @@ export default function Footer() {
                   258, Katewa Nagar, Devi Nagar,<br />Shyam Nagar, Jaipur,<br />Rajasthan - 302019
                 </a>
               </li>
-              <li><a href="mailto:digitalinfluencerns@gmail.com">digitalinfluencerns@gmail.com</a></li>
+              <li><a href="mailto:digitalmoiinfluencerns@gmail.com">digitalinfluencerns@gmail.com</a></li>
             </ul>
           </div>
         </div>

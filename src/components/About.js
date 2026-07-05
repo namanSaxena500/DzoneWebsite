@@ -75,6 +75,12 @@ export default function About() {
                   <strong>Pixel-Perfect UX</strong> that feels completely effortless and intuitive.
                 </p>
               </div>
+              <div className="feature-item">
+                <img src="/images/bullet.png" alt="check" className="feature-bullet-img" />
+                <p className="feature-text-new">
+                  <strong>Security-First Architecture</strong> that safeguards critical data and ensures compliance.
+                </p>
+              </div>
             </div>
           </div>
         </div>

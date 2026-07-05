@@ -7,11 +7,13 @@ import Navbar from '@/components/Navbar';
 import TechnologyHero from '@/components/TechnologyHero';
 import TechIntro from '@/components/TechIntro';
 import ServicesGrid from '@/components/ServicesGrid';
+import ServiceTechnologies from '@/components/ServiceTechnologies';
 import Portfolio from '@/components/Portfolio';
 import Expertise from '@/components/Expertise';
 import CtaBanner from '@/components/CtaBanner';
 import WhyUs from '@/components/WhyUs';
 import Contact from '@/components/Contact';
+import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
 
@@ -42,12 +44,14 @@ export default function TechnologyDetailPage({ slug }) {
         services={tech.features}
         slug={slug}
       />
+      <ServiceTechnologies />
       <Portfolio />
       <Expertise isStatic={true} />
       <CtaBanner />
       <WhyUs />
       <Contact />
       <Faq items={tech.faq} />
+      <Testimonials />
       <Footer />
     </div>
   );
