@@ -1,11 +1,22 @@
 import { Suspense } from 'react';
 import PageProgressBar from '@/components/PageProgressBar';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
+});
 
 export const metadata = {
   metadataBase: new URL('https://dzone.ae'),
   title: 'Dzone - Freelance IT Services & Web Development Partner',
   description: 'Dzone delivers top-tier freelance IT services and custom web development in Jaipur. We build responsive web apps, mobile solutions, and cloud architectures.',
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.ico',
   },
@@ -28,7 +39,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={plusJakartaSans.variable}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

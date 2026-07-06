@@ -1,8 +1,7 @@
 /* Global Stylesheet for Dzone Website */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
-  --font-primary: 'Plus Jakarta Sans', sans-serif;
+  --font-primary: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
 
   /* Color Palette - Premium & Modern */
   --primary: #2563eb;

@@ -14,6 +14,9 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'Technologies We Deploy | Dzone',
   description: 'Explore our comprehensive tech stack including React, Next.js, Flutter, React Native, Node.js, Go, Python, PostgreSQL, and Figma to build your software products.',
+  alternates: {
+    canonical: '/technology',
+  },
 };
 
 const technologyFaqItems = [

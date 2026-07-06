@@ -14,6 +14,9 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'Freelance IT Services & Web Development in Jaipur | Dzone',
   description: 'Looking for freelance IT services or expert web development in Jaipur? Dzone provides top-tier custom software development, mobile apps, and scalable cloud architectures. Partner with expert developers today.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Home() {

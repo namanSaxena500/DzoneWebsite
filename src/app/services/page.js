@@ -15,6 +15,9 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'Our Software Engineering & Design Services | Dzone',
   description: 'Explore the full range of custom software development, UI/UX design, mobile applications, cyber security, DevOps, and cloud services offered by Dzone.',
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 const servicesFaqItems = [

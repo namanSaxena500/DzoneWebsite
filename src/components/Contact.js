@@ -17,6 +17,18 @@ export default function Contact() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === 'phoneNumber') {
+      // Allow only numbers and restrict to 10 digits
+      const digitsOnly = value.replace(/\D/g, '');
+      if (digitsOnly.length > 10) return;
+      setFormData((prev) => ({
+        ...prev,
+        [name]: digitsOnly
+      }));
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value
@@ -28,19 +40,39 @@ export default function Contact() {
     setIsSubmitting(true);
     setFormStatus({ type: '', message: '' });
 
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setFormStatus({ 
+        type: 'error', 
+        message: 'Web3Forms Access Key is missing. Please add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to your .env.local file.' 
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: `New Dzone Lead - ${formData.service}`,
+          company: formData.company || 'N/A',
+          phone: `${formData.phoneCode} ${formData.phoneNumber}`,
+          service: formData.service,
+          message: formData.message
+        }),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
-        setFormStatus({ type: 'success', message: data.message || 'Message sent successfully!' });
+      if (response.ok && data.success) {
+        setFormStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
         setFormData({
           name: '',
           company: '',
@@ -51,7 +83,7 @@ export default function Contact() {
           message: ''
         });
       } else {
-        setFormStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
+        setFormStatus({ type: 'error', message: data.message || 'Something went wrong. Please try again.' });
       }
     } catch (error) {
       setFormStatus({ type: 'error', message: 'Failed to connect. Please check your internet and try again.' });
@@ -107,37 +139,22 @@ export default function Contact() {
               />
 
               <div className="phone-input-wrapper-new">
-                <div className="phone-code-badge-new">
-                  <div className="flag-select-wrapper">
-                    <span className="flag-emoji">
-                      {formData.phoneCode === '+91' ? '🇮🇳' : 
-                       formData.phoneCode === '+1' ? '🇺🇸' : 
-                       formData.phoneCode === '+44' ? '🇬🇧' : 
-                       formData.phoneCode === '+61' ? '🇦🇺' : '🇮🇳'}
-                    </span>
-                    <span className="phone-caret">▼</span>
-                    <select 
-                      name="phoneCode" 
-                      value={formData.phoneCode} 
-                      onChange={handleInputChange}
-                      className="hidden-flag-select"
-                    >
-                      <option value="+91">India (+91)</option>
-                      <option value="+1">USA (+1)</option>
-                      <option value="+44">UK (+44)</option>
-                      <option value="+61">Australia (+61)</option>
-                    </select>
-                  </div>
-                  <span className="phone-code-text">{formData.phoneCode}</span>
+                <div className="phone-code-badge-new" style={{ cursor: 'default' }}>
+                  <span className="flag-emoji">🇮🇳</span>
+                  <span className="phone-code-text">+91</span>
                 </div>
                 <input
                   type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
                   className="form-input-new phone-input-field"
-                  placeholder="Mobile"
+                  placeholder="10-Digit Mobile Number"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
+                  maxLength={10}
+                  pattern="[0-9]{10}"
+                  inputMode="numeric"
+                  required
                 />
               </div>
 
