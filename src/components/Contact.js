@@ -42,9 +42,9 @@ export default function Contact() {
 
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
     if (!accessKey) {
-      setFormStatus({ 
-        type: 'error', 
-        message: 'Web3Forms Access Key is missing. Please add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to your .env.local file.' 
+      setFormStatus({
+        type: 'error',
+        message: 'Sumbittion Failed . Please try again later'
       });
       setIsSubmitting(false);
       return;
@@ -116,7 +116,7 @@ export default function Contact() {
                 onChange={handleInputChange}
                 required
               />
-              
+
               <input
                 type="text"
                 id="company"
@@ -159,10 +159,10 @@ export default function Contact() {
               </div>
 
               <div className="select-wrapper-new">
-                <select 
-                  id="service" 
-                  name="service" 
-                  value={formData.service} 
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
                   onChange={handleInputChange}
                   className="form-select-new"
                   required
@@ -189,9 +189,9 @@ export default function Contact() {
               />
 
               <div className="form-submit-container-new">
-                <button 
-                  type="submit" 
-                  disabled={isSubmitting} 
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
                   className="btn-submit-new"
                 >
                   {isSubmitting ? 'Sending...' : "Let's Connect"}
